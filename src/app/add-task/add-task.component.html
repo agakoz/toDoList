@@ -1,6 +1,10 @@
-<div id="newTaskInput">
-  <label>New task
-    <input [(ngModel)]="newTask">
-  </label>
-  <button (click)="add()">Add</button>
+<div id="newTaskInput" class="input-group mb-3">
+
+
+  <input type="text" class="form-control" placeholder="My new task to do" [(ngModel)]="newTask"
+         aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button id="button-addon2" type="button" class="btn btn-primary btn " (click)="add()">Add</button>
+  </div>
+
 </div>
