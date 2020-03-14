@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'toDoListYTProject';
+
+  tasksList: Array<string> = [];
+  doneList: Array<string> = [];
+
+  add(task: string) {
+    this.tasksList.push(task);
+  }
+
+  remove(task: string) {
+    this.tasksList = this.tasksList.filter(e => e !== task);
+  }
+
+  done(task: string) {
+    this.doneList.push(task);
+    this.remove(task);
+  }
 }

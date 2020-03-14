@@ -1,0 +1,19 @@
+.taskslist{
+  float:  left;
+
+}
+#donelist{
+  float: right;
+  margin-right: 500px;
+
+}
+.list{
+  display: inline-block;
+  /*padding-left: 300px;*/
+  /*padding-right: 300px;*/
+}
+
+#newTaskInput{
+  width: auto;
+  position: center;
+}
