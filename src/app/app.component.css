@@ -1,8 +1,8 @@
-.taskslist{
+.tasksList{
   float:  left;
 
 }
-#donelist{
+#doneList{
   float: right;
   margin-right: 500px;
 

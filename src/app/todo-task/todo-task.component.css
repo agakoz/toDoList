@@ -1,7 +1,20 @@
 #noTaskLabel{
-  color: #ad0000;
+  color: #088f17;
 }
 /*.taskslist{*/
 /*  display: inline-block;*/
 /*  float: left;*/
 /*}*/
+
+li {
+  background: lightgray;
+  margin: 5px;
+}
+.odd-li {
+  background: lavender;
+  margin: 5px;
+}
+.last-li {
+  background: pink;
+  margin: 5px;
+}
