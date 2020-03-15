@@ -2,16 +2,16 @@
 <div>
 
   <div id="newTaskInput" class="container">
-    <app-add-task (emitTask)="add($event)"></app-add-task>
+    <app-add-task></app-add-task>
   </div>
 
   <div class="container">
     <div class="tasksList, list">
-      <app-todo-task [tasksList]="tasksList" (emitRemove)="remove($event)" (emitDone)="done($event)"></app-todo-task>
+      <app-todo-task></app-todo-task>
     </div>
 
     <div id="doneList" class="list">
-      <app-done-task [doneList]="doneList"></app-done-task>
+      <app-done-task></app-done-task>
     </div>
   </div>
 
