@@ -1,6 +1,8 @@
 <p>DONE: {{doneList.length}}</p>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item" *ngFor="let task of doneList">
+<!---->
+<ul id="doneList" class="list-group list-group-flush">
+<!--  -->
+  <li class="list-group-item" [date]="task.endDate" appChecked appDate *ngFor="let task of doneList">
     {{task.name}}
   </li>
 </ul>

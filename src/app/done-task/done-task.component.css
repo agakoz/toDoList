@@ -1,0 +1,4 @@
+#doneList li.list-group-item{
+  display: list-item;
+  list-style-position: inside;
+}
