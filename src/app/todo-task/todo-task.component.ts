@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {TaskService} from '../services/task.service';
+import {Task} from '../models/task';
 
 @Component({
   selector: 'app-todo-task',
@@ -8,10 +9,11 @@ import {TaskService} from '../services/task.service';
 })
 export class TodoTaskComponent implements OnInit {
 
-  tasksList = [];
+  tasksList: Array<Task> = [];
+  noTaskMessage = 'No task to do, take some rest!';
 
   constructor(private taskService: TaskService) {
-    this.taskService.getObsTaskList().subscribe((tasks: Array<string>) => {
+    this.taskService.getObsTaskList().subscribe((tasks: Array<Task>) => {
       this.tasksList = tasks;
     });
   }
@@ -19,11 +21,11 @@ export class TodoTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  remove(task: string) {
+  remove(task: Task) {
     this.taskService.remove(task);
   }
 
-  done(task: string) {
+  done(task: Task) {
     this.taskService.done(task);
   }
 

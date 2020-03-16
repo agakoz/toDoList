@@ -2,7 +2,7 @@
     <p [ngStyle]="{color: getColor()}">TO DO: {{tasksList.length}}</p>
     <ul class="list-group list-group-flush">
       <li class="list-group-item list-group-item-action " *ngFor="let task of tasksList; let odd = odd" [ngClass]="{'list-group-item-light' : odd, 'list-group-item-danger' : tasksList.length===1}">
-        {{task}}
+        {{task.name}}
         <button type="button" class="btn btn-success float-right" (click)="done(task)">done</button>
         <button  type="button" class="btn btn-danger float-right" (click)="remove(task)">delete</button>
       </li>
@@ -11,6 +11,6 @@
 
 
 <ng-template #noTask >
-  <p id="noTaskLabel" class="taskslist">No task to do, take some rest!</p>
+  <p id="noTaskLabel" class="taskslist">{{noTaskMessage}}</p>
 </ng-template>
 
