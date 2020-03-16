@@ -2,7 +2,7 @@
 <!---->
 <ul id="doneList" class="list-group list-group-flush">
 <!--  -->
-  <li class="list-group-item list-group-item-action" [date]="task.endDate" appChecked appDate *ngFor="let task of doneList">
+  <li class="list-group-item list-group-item-action" [date]="task.endDate" appChecked appDate *ngFor="let task of doneList | sortAlphabet">
     {{task.name | transformTask}}
   </li>
 </ul>

@@ -13,7 +13,7 @@ export class DoneTaskComponent implements OnInit {
 
   constructor(private taskService: TaskService) {
     this.taskService.getObsDoneList().subscribe((tasks: Array<Task>) => {
-      this.doneList = tasks;
+      this.doneList = tasks.slice();
     });
   }
 
